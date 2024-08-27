@@ -63,9 +63,16 @@
 	}
 	loadingCover.style.display = "";
 	const script2 = document.createElement("script");
-	var unityInstance;
-	var wasLoad = 0;
-	var isSound = 1;
+
+        let StartUnityInstance;
+        let myGameInstance = null;
+        let ysdk = null;
+        let player = null;
+        let leaderboard;
+        let payments = null;
+        let initGame = false;
+        let nowFullAdOpen = false;
+
 	script2.src = loaderUrl;
 	script2.onload = () => {
 		createUnityInstance(canvas, config, (progress) => {
