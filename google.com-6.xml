@@ -1,3 +1,7 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<Module>
+<ModulePrefs title="Google.com" />
+<Content type="html"><![CDATA[
 <!DOCTYPE html>
 <html lang="en-us">
   <head>
@@ -22,7 +26,7 @@
       </div>
     </div>
     <div id="unity-fullscreen-button" style="display: none;"></div>
-	<script src="https://cdn.jsdelivr.net/gh/google-edu-ca/nas@main/add/howler.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/google-edu-ca/nas@main/add/howler.js"></script>
     <script>
       const hideFullScreenButton = "1";
       const buildUrl = "https://cdn.jsdelivr.net/gh/google-edu-ca/nas@main/Build/";
@@ -65,9 +69,9 @@
         //config.devicePixelRatio = 1;
       }
       loadingCover.style.display = "";
-	  
-	  var unityInstance;
-	  
+      
+      var unityInstance;
+      
       const script = document.createElement("script");
       script.src = loaderUrl;
       script.onload = () => {
@@ -76,7 +80,7 @@
           progressBarEmpty.style.display = "";
           progressBarFull.style.width = `${100 * progress}%`;
         }).then((ui) => {
-		unityInstance = ui;
+        unityInstance = ui;
           loadingCover.style.display = "none";
           if (canFullscreen) {
             if (!hideFullScreenButton) {
@@ -91,21 +95,24 @@
         });
       };
       document.body.appendChild(script);
-	  	var sound;
-	sound = new Howl({
-		src: ['https://cdn.jsdelivr.net/gh/google-edu-ca/nas@main/silent.mp3']
-	});
-	sound.play();
-	
-	function HowlerSoundOff() {
-		isSound = 0;
-		Howler.volume(0);
-	}
+        var sound;
+    sound = new Howl({
+        src: ['https://cdn.jsdelivr.net/gh/google-edu-ca/nas@main/silent.mp3']
+    });
+    sound.play();
+    
+    function HowlerSoundOff() {
+        isSound = 0;
+        Howler.volume(0);
+    }
 
-	function HowlerSoundOn() {
-		isSound = 1;
-		Howler.volume(1);
-	}
+    function HowlerSoundOn() {
+        isSound = 1;
+        Howler.volume(1);
+    }
     </script>
   </body>
 </html>
+
+]]></Content>
+</Module>
